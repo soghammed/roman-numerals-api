@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('convert-roman', 'IntegerConverterController@convertRoman');
+
+Route::get('converted-integers', 'IntegerConverterController@index');
+
+Route::get('top-converted-integers', 'IntegerConverterController@getTopConvertedIntegers');
